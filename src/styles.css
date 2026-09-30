@@ -875,22 +875,22 @@ input[type="radio"] {
   font-weight: 850;
   padding: 0.2rem;
 }
-.statistics-table tbody th {
+.statistics-page .statistics-table tbody th {
   display: grid;
   grid-template-columns: auto minmax(170px, 1fr) auto;
   align-items: center;
   column-gap: 0.45rem;
   min-width: 290px;
 }
-.statistics-table tbody th .jersey {
+.statistics-page .statistics-table tbody th .jersey {
   min-width: auto;
   margin-right: 0;
 }
-.statistics-table tbody th a {
+.statistics-page .statistics-table tbody th a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.statistics-table tbody th small {
+.statistics-page .statistics-table tbody th small {
   color: var(--muted);
 }
 .statistics-table td.leader {
