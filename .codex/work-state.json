@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "work_unit": "pr54-statistics-ui",
+  "repository": "https://github.com/renato-lucindo/copa-es-ouro-2026",
+  "branch": "codex/pr54-statistics-ui",
+  "base_commit": "0a3ef73",
+  "head_commit": "3904cddacc2bbed62e82aeb15534f57f0c8cd20b",
+  "status": "active",
+  "write_lock_owner": "main-agent",
+  "completed": [
+    "Página /estatisticas substituída pelo explorador visual da PR-54, com adapter para os 18 jogos canônicos.",
+    "Filtros por checkbox, escopos, modos, busca, ordenação, paginação e comparação implementados.",
+    "Jhonatan Dos Santos e identidade independente de camisa cobertos por regressões.",
+    "Design QA documentado em design-qa.md para 1440x1000 e 390x844."
+  ],
+  "pending": [
+    "Enviar a branch ao GitHub.",
+    "Publicar o Worker a partir do build validado.",
+    "Fazer smoke test da URL pública e confirmar Jhonatan na busca."
+  ],
+  "evidence": [
+    "npm run check: aprovado em 2026-09-30; 10 testes, dados 6 equipes/99 atletas/18 jogos e build Vite aprovados.",
+    "npm run test:e2e: 12 testes aprovados em desktop e mobile, incluindo axe e reflow a 200%.",
+    "Commit material: 3904cddacc2bbed62e82aeb15534f57f0c8cd20b."
+  ],
+  "next_exact_action": "No repositório copa-es-ouro-2026, enviar codex/pr54-statistics-ui ao origin e confirmar que o GitHub mostra o commit 3904cdd; depois publicar com wrangler deploy e validar /estatisticas?scope=all.",
+  "reset_at": null,
+  "updated_at": "2026-09-30T13:20:40-03:00"
+}
