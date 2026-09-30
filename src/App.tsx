@@ -8,6 +8,7 @@ import {
   formatNumber,
   metricLabels,
 } from "./domain";
+import { ReferenceStatisticsPage } from "./reference/reference-statistics-page";
 import type {
   CompetitionData,
   Game,
@@ -1068,7 +1069,7 @@ function route(data: CompetitionData, path: string) {
   if (path.startsWith("/jogos/"))
     return <GamePage data={data} gameId={decodeURIComponent(path.slice(7))} />;
   if (path === "/classificacao") return <StandingsPage data={data} />;
-  if (path === "/estatisticas") return <StatisticsPage data={data} />;
+  if (path === "/estatisticas") return <ReferenceStatisticsPage data={data} />;
   if (path.startsWith("/jogadores/"))
     return <PlayerPage data={data} slug={decodeURIComponent(path.slice(11))} />;
   if (path === "/sobre-os-dados") return <DataPage data={data} />;
@@ -1093,5 +1094,8 @@ export function App() {
         </div>
       </Layout>
     );
+  if (path === "/estatisticas") {
+    return data ? <ReferenceStatisticsPage data={data} /> : <Loading />;
+  }
   return <Layout path={path}>{data ? route(data, path) : <Loading />}</Layout>;
 }
