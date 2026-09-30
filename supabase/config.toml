@@ -1,0 +1,13 @@
+project_id = "copa-es-ouro-2026"
+
+[api]
+enabled = true
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 10
+
+[db]
+major_version = 17
+
+[auth]
+enabled = false

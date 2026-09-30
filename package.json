@@ -1,0 +1,43 @@
+{
+  "name": "copa-es-ouro-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run data:check && npm run build",
+    "data:check": "node scripts/check-data.mjs",
+    "data:seed": "node scripts/generate-seed.mjs",
+    "dev": "vite",
+    "deploy": "npm run check && wrangler deploy",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "preview": "vite preview",
+    "test": "vitest run src",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "types:worker": "wrangler types worker-configuration.d.ts"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@axe-core/playwright": "4.13.0",
+    "@cloudflare/workers-types": "5.20260930.2",
+    "@playwright/test": "1.63.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/node": "24.10.1",
+    "@vitejs/plugin-react": "6.0.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2",
+    "wrangler": "4.140.0"
+  }
+}
